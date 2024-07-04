@@ -4,9 +4,13 @@ import com.FireAlert.models.Coordinate;
 import com.FireAlert.models.Data;
 import com.FireAlert.models.Fire;
 import com.FireAlert.repositories.Icrud;
+import org.apache.http.util.EntityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+import java.net.http.HttpClient;
 import java.util.ArrayList;
 
 @Service
@@ -41,4 +45,5 @@ public class ServiceFire {
         public Fire createFire(Fire newFire) {
             return icrud.save(newFire);
         }
+
 }
