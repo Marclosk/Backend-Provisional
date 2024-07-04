@@ -10,7 +10,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Fire {
+public class Fire{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,13 +23,12 @@ public class Fire {
     @Column(name = "phone")
     private int phone;
 
+    @Column(name = "message")
+    private String message;
+
     @Column(name = "latitude")
-    private int latitude;
+    private double latitude;
 
     @Column(name = "longitude")
-    private int longitude;
-
-    @Column(name = "message")
-    private int message;
-
+    private double longitude;
 }
